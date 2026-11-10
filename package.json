@@ -56,9 +56,7 @@
 			"dist/renderer/**",
 			"src/renderer/**/*.{html,css}",
 			"assets/**",
-			"package.json",
-			"!**/node_modules/node-hid/prebuilds/*-linux*/**",
-			"!**/node_modules/@serialport/bindings-cpp/prebuilds/{linux,android}*/**"
+			"package.json"
 		],
 		"extraResources": [
 			{
@@ -74,6 +72,12 @@
 		],
 		"mac": {
 			"category": "public.app-category.video",
+			"files": [
+				"!**/node_modules/node-hid/prebuilds/HID-win32-*/**",
+				"!**/node_modules/node-hid/prebuilds/HID-linux-*/**",
+				"!**/node_modules/@serialport/bindings-cpp/prebuilds/win32-*/**",
+				"!**/node_modules/@serialport/bindings-cpp/prebuilds/linux-*/**"
+			],
 			"target": [
 				{
 					"target": "dmg",
@@ -105,6 +109,12 @@
 			"title": "PTZ Pilot ${version}"
 		},
 		"win": {
+			"files": [
+				"!**/node_modules/node-hid/prebuilds/HID-darwin-*/**",
+				"!**/node_modules/node-hid/prebuilds/HID-linux-*/**",
+				"!**/node_modules/@serialport/bindings-cpp/prebuilds/darwin-*/**",
+				"!**/node_modules/@serialport/bindings-cpp/prebuilds/linux-*/**"
+			],
 			"target": [
 				{
 					"target": "nsis",
